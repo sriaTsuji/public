@@ -62,16 +62,11 @@ const convertToRadian = function (degree) {
 const linearTransformation = function (target, degree) {
   // ラジアンを取得
   const radian = convertToRadian(degree);
-  // 変換行列
-  const queue = [
-    [Math.cos(radian), -Math.sin(radian)],
-    [Math.sin(radian), Math.cos(radian)],
-  ];
 
   // 線形変換後のオブジェクトを返却する
   return {
-    x: target.x * queue[0][0] + target.y * queue[0][1],
-    y: target.x * queue[1][0] + target.y * queue[1][1],
+    x: target.x * Math.cos(radian) + target.y * -Math.sin(radian),
+    y: target.x * Math.sin(radian) + target.y * Math.cos(radian),
   };
 };
 
