@@ -7,7 +7,7 @@ let context = null;
 
 // 初期化処理
 const init = function () {
-  // 画面の高さを取得
+  // 画面の横幅・高さを取得
   width = window.innerWidth;
   height = window.innerHeight;
 
