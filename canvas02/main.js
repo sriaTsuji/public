@@ -89,7 +89,7 @@ window.onload = function(){
   drawLine(- (width / 2), 0, width / 2, 0)
 
   // 回転の中心点
-  const BasicPoint = {
+  const basicPoint = {
     x: 80,
     y: 120,
   }
@@ -102,7 +102,7 @@ window.onload = function(){
   const boxSize = 20
 
   // 回転の中心点を描画
-  drawCircle(BasicPoint.x, BasicPoint.y, 4, '#000000')
+  drawCircle(basicPoint.x, basicPoint.y, 4, '#000000')
 
   // 線形変換前のオブジェクトを描画
   drawRect(
@@ -114,7 +114,7 @@ window.onload = function(){
   )
 
   // 中心点を元に60°回転させる
-  const rect02 = linearTransformation(rect01, 60, BasicPoint)
+  const rect02 = linearTransformation(rect01, 60, basicPoint)
   // 60°回転させたボックスを描画
   drawRect(
     rect02.x - (boxSize / 2),
@@ -125,7 +125,7 @@ window.onload = function(){
   )
 
   // 中心点を元に120°回転させる
-  const rect03 = linearTransformation(rect01, 120, BasicPoint)
+  const rect03 = linearTransformation(rect01, 120, basicPoint)
   // 120°回転させたボックスを描画
   drawRect(
     rect03.x - (boxSize / 2),
@@ -136,7 +136,7 @@ window.onload = function(){
   )
 
   // 中心点を元に180°回転させる
-  const rect04 = linearTransformation(rect01, 180, BasicPoint)
+  const rect04 = linearTransformation(rect01, 180, basicPoint)
   // 180°回転させたボックスを描画
   drawRect(
     rect04.x - (boxSize / 2),
