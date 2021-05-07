@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/vnd.microsoft.icon" sizes="16x16" href="./favicon.ico">
+  <title>rive test</title>
+</head>
+
+<body>
+  <p>rive test</p>
+  <hr />
+  <canvas id="canvas" width="228" height="108"></canvas>
+  <script src="https://unpkg.com/rive-js@0.7.10/dist/rive.min.js"></script>
+  <script>
+    const canvas = document.getElementById("canvas");
+
+    const r = new rive.Rive({
+      src: "/sample-toggle-animation.riv",
+      canvas: canvas,
+      onload: () =>
+      {
+        r.play();
+      },
+    });
+  </script>
+</body>
+
+</html>
