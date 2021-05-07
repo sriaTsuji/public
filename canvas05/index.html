@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas</title>
+  <link rel="icon" type="image/vnd.microsoft.icon" sizes="16x16" href="./favicon.ico">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+    .buttonWrapper {
+      background-color: rgba(255, 255, 255, 0.75);
+      bottom: 20px;
+      left: 20px;
+      padding: 10px;
+      position: absolute;
+      width: 60px;
+    }
+
+    .button {
+      appearance: none;
+      border: none;
+      background-color: blue;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      display: block;
+      margin: auto;
+      outline: none;
+      padding: 4px 12px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <canvas id="canvas"></canvas>
+    <div class="buttonWrapper">
+      <button id="returnButton" class="button">戻る</button>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>
