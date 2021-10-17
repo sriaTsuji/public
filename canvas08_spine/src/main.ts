@@ -24,8 +24,8 @@ const onAssetsLoaded = (loader: any, res: any) => {
   // 初期アニメーションとして idle をセット
   zunko.state.setAnimation(0, 'idle', true)
   // 他アニメーションをセット
-  zunko.state.addAnimation(1, 'right_hand', false, 0)
-  zunko.state.addAnimation(2, 'left_hand', false, 0)
+  zunko.state.addAnimation(1, 'white_flag_hand', false, 0)
+  zunko.state.addAnimation(2, 'red_flag_hand', false, 0)
   zunko.state.tracks[1].alpha = 0
   zunko.state.tracks[2].alpha = 0
 
@@ -43,7 +43,9 @@ const onAssetsLoaded = (loader: any, res: any) => {
       }
     })
     // 画面の高さを100%として、マウスの位置を百分率で取得
-    const heightPercentage = Math.round(getPercentage(window.innerHeight, event.clientY))
+    const heightPercentage = Math.round(
+      getPercentage(window.innerHeight, event.clientY)
+    )
     // 各アニメーションの alpha 値を更新
     switch (resultOrthant) {
       // 第1・4象限（画面右側）
@@ -89,7 +91,13 @@ const getCenterPosition = ({ x, y }: { x: number; y: number }) => {
  * @param {{ x: number; y: number; }} currentPosition mouse の現在位置
  * @return {number} 1〜4
  */
-const getOrthant = ({ canvasSize, currentPosition }: { canvasSize: { x: number; y: number }; currentPosition: { x: number; y: number } }) => {
+const getOrthant = ({
+  canvasSize,
+  currentPosition
+}: {
+  canvasSize: { x: number; y: number }
+  currentPosition: { x: number; y: number }
+}) => {
   // canvas の中心点
   const centerPosition = getCenterPosition({ x: canvasSize.x, y: canvasSize.y })
 
